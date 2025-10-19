@@ -1,0 +1,219 @@
+/* --- Estilos Generales --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- Contenedor Principal --- */
+#pokedex-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+h1 {
+  color: #d90429;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* --- Formulario de Búsqueda --- */
+#search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#pokemon-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#pokemon-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#search-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Contenedor de Mensajes (Error/Carga) --- */
+#message-container {
+  font-size: 14px;
+  margin-bottom: 15px;
+  min-height: 20px;
+}
+
+.loading {
+  color: #555;
+}
+
+.error {
+  color: #d90429;
+  font-weight: 600;
+}
+
+/* --- Pantalla de la Pokédex (Resultado) --- */
+#pokedex-display {
+  border: 4px solid #eee;
+  border-radius: 12px;
+  background: #f9f9f9;
+  padding: 20px;
+  min-height: 300px;
+}
+
+#pokemon-name {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #222;
+}
+
+#pokemon-image {
+  width: auto;
+  height: 180px;
+  margin-bottom: 15px;
+  image-rendering: pixelated; /* Para sprites clásicos */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  /* Usar 'height: auto; width: 200px' si se usa official-artwork */
+}
+
+/* --- Tipos de Pokémon --- */
+#pokemon-types {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.type-badge {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Colores de Tipos --- */
+.normal {
+  background-color: #a8a878;
+}
+.fire {
+  background-color: #f08030;
+}
+.water {
+  background-color: #6890f0;
+}
+.electric {
+  background-color: #f8d030;
+}
+.grass {
+  background-color: #78c850;
+}
+.ice {
+  background-color: #98d8d8;
+}
+.fighting {
+  background-color: #c03028;
+}
+.poison {
+  background-color: #a040a0;
+}
+.ground {
+  background-color: #e0c068;
+}
+.flying {
+  background-color: #a890f0;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b820;
+}
+.rock {
+  background-color: #b8a038;
+}
+.ghost {
+  background-color: #705898;
+}
+.dragon {
+  background-color: #7038f8;
+}
+.dark {
+  background-color: #705848;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fairy {
+  background-color: #ee99ac;
+}
+
+/* --- Estadísticas --- */
+#pokemon-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#pokemon-stats li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+#pokemon-stats li:last-child {
+  border-bottom: none;
+}
+
+#pokemon-stats span:first-child {
+  font-weight: 600;
+  color: #444;
+  text-transform: capitalize;
+}
+#pokemon-stats span:last-child {
+  font-weight: 700;
+  color: #000;
+}
